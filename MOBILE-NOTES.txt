@@ -1,0 +1,16 @@
+PhotoCraft Web v0.11.1 - official WebAssembly build (storytold/photocraft)
+packed with mobile-friendly fixes applied to index.html:
+
+1. 100dvh + viewport-fit=cover
+   -> canvas never hides behind phone browser toolbars (no more cut-off UI)
+2. touch-action: none on canvas/body + overscroll-behavior: none
+   -> browser gestures (double-tap zoom, pull-to-refresh, edge swipes)
+      can no longer steal taps meant for the top menu bar
+3. safe-area insets (env(safe-area-inset-*))
+   -> menu bar stays clear of notches / status bars in webviews
+4. maximum-scale=1 in the viewport meta
+
+HOSTING: upload the folder contents to any static host (Netlify, Cloudflare
+Pages, GitHub Pages, nginx, Apache...). The site must be served from the
+root (or a subfolder works too - all URLs are relative). See HOSTING.md.
+No server code, no build step needed. ~11 MB download on first visit.
